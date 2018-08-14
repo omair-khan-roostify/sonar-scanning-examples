@@ -6,9 +6,9 @@ public class App {
         return "Hello world.";
     }
     
-    public void test1(){
-	System.out.println("Hello");
-        System.out.println("Hello");
+    public int test1(){
+	   
+        int t = 1;
     }
 
     public void test2(){
