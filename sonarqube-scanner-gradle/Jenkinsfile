@@ -14,25 +14,25 @@ pipeline {
 
         stage ('clean') {
             steps {
-                sh "./gradlew clean"
+                sh "gradle clean"
             }
         }
 
         stage ('compile') {
             steps {
-                sh "./gradlew compileJava"
+                sh "gradle compileJava"
             }
         }
 
         stage ('Build') {
             steps {
-                sh "./gradlew build -x test -i"
+                sh "gradle build -x test -i"
             }
         }
         
         stage ('test') {
             steps {
-                sh "./gradlew test"
+                sh "gradle test"
             }
         }
         }
