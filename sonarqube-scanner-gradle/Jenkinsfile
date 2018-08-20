@@ -49,6 +49,6 @@ pipeline {
                     echo 'This is a branch build.'
                     sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle sonar -Dsonar.host.url=${SONAR_URL} -Dsonar.login=${SONAR_PASSWORD} -Dsonar.github.repository=${env.CUSTOM_SONAR_REPO_NAME} -Dsonar.branch=${env.GIT_BRANCH} -i"
                 }
-                }
+                
         }
     }
