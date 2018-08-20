@@ -14,25 +14,25 @@ pipeline {
 
         stage ('clean') {
             steps {
-                sh "gradle clean"
+                sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle clean"
             }
         }
 
         stage ('compile') {
             steps {
-                sh "gradle compileJava"
+                sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle compileJava"
             }
         }
 
         stage ('Build') {
             steps {
-                sh "gradle build -x test -i"
+                sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle build -x test -i"
             }
         }
         
         stage ('test') {
             steps {
-                sh "gradle test"
+                sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle test"
             }
         }
         }
