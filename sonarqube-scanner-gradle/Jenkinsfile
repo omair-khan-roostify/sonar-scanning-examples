@@ -28,7 +28,7 @@ pipeline {
         stage ('Build') {
             steps {
                 sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle build -x test -i"
-                sayHello
+                sayHello '.'
             }
         }
     }
