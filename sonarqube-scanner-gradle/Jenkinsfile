@@ -33,8 +33,8 @@ pipeline {
         
         stage ('test') {
             steps {
-                sayHello 'test'
-                sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle test"
+                test 'sonarqube-scanner-gradle'
+                //sh "./sonarqube-scanner-gradle/gradlew -b ./sonarqube-scanner-gradle/build.gradle test"
             }                
         }
     }
